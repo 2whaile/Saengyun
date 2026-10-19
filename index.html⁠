@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수능 생활과 윤리 완전정리본</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --primary: #2563eb;
+      --border: #e2e8f0;
+      --hl-yellow: #fef08a; /* 핵심 사상 하이라이트 */
+      --hl-pink: #fbcfe8;   /* 오답 함정 하이라이트 */
+      --tag-yellow-bg: #fef9c3;
+      --tag-yellow-txt: #854d0e;
+      --tag-pink-bg: #fce7f3;
+      --tag-pink-txt: #9d174d;
+      --tag-blue-bg: #dbeafe;
+      --tag-blue-txt: #1e40af;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 16px;
+      max-width: 680px;
+      margin: 0 auto;
+      word-break: keep-all;
+    }
+
+    header {
+      text-align: center;
+      padding: 24px 0 16px;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      background: #eff6ff;
+      border-left: 4px solid var(--primary);
+      padding: 8px 12px;
+      margin: 28px 0 14px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .sub-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 16px 0 8px;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .card-header .subject {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .card-header .scholar {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .row {
+      margin-bottom: 8px;
+      font-size: 0.88rem;
+    }
+    .row:last-child { margin-bottom: 0; }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .tag-yellow { background: var(--tag-yellow-bg); color: var(--tag-yellow-txt); }
+    .tag-pink { background: var(--tag-pink-bg); color: var(--tag-pink-txt); }
+    .tag-blue { background: var(--tag-blue-bg); color: var(--tag-blue-txt); }
+
+    .hl-yellow {
+      background: var(--hl-yellow);
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+    .hl-pink {
+      background: var(--hl-pink);
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    .box-killer {
+      background: #fff7ed;
+      border: 1px solid #ffedd5;
+      border-left: 4px solid #f97316;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 14px;
+      margin: 12px 0;
+      font-size: 0.85rem;
+    }
+    .box-killer strong { color: #c2410c; }
+
+    .box-algorithm {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: 12px 0;
+      font-size: 0.85rem;
+    }
+    .box-algorithm strong { color: #0284c7; }
+
+    ul { list-style: none; }
+    li { margin-bottom: 6px; }
+    li:last-child { margin-bottom: 0; }
+    li::before { content: "• "; color: var(--text-muted); }
+
+    .badge-ox {
+      display: inline-block;
+      font-weight: 700;
+      padding: 0 4px;
+      border-radius: 3px;
+    }
+    .badge-o { color: #16a34a; background: #dcfce7; }
+    .badge-x { color: #dc2626; background: #fee2e2; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>수능 생활과 윤리 완전정리본</h1>
+    <p>핵심 사상(노랑) / 오답 함정(분홍) / 킬러 판별 알고리즘</p>
+  </header>
+
+  <!-- PART 1 -->
+  <div class="section-title">PART 1. 환경 윤리 (도덕적 고려의 범위)</div>
+  <div class="sub-title">01. 도덕적 고려 대상의 점진적 확대</div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">동물 중심주의</span>
+      <span class="scholar">싱어 (이익평등고려) · 리건 (동물권리론)</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      싱어: <span class="hl-yellow">쾌고 감수 능력</span>이 도덕적 고려의 유일한 기준.<br>
+      리건: 1세 이상 포유류는 <span class="hl-yellow">삶의 주체</span>로서 내재적 가치를 지님.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      동물에게 도덕적 실천 능력이 있다? <span class="badge-ox badge-x">X</span> (도덕적 행위자는 인간뿐)<br>
+      인간과 동물을 완전히 동일하게 대우한다? <span class="badge-ox badge-x">X</span> (이익 '평등 고려'일 뿐, '동일 대우'가 아님)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">생명 중심주의</span>
+      <span class="scholar">슈바이처 (생명외경) · 테일러 (목적론적)</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      슈바이처: 모든 생명은 <span class="hl-yellow">살려는 의지</span>를 지니며 동등한 가치를 가짐.<br>
+      테일러: 모든 생명체는 고유한 선을 지닌 <span class="hl-yellow">목적론적 삶의 중심</span>.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      식물도 쾌락과 고통을 느낀다? <span class="badge-ox badge-x">X</span> (생명중심주의는 쾌고감수능력이 기준이 아님)<br>
+      불가피한 살생은 무조건 악이다? <span class="badge-ox badge-x">X</span> (슈바이처: 생명 유지를 위한 불가피한 살생은 허용되나 죄책감 수반)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">생태 중심주의</span>
+      <span class="scholar">레오폴드 (대지윤리)</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      생명 공동체 전체(<span class="hl-yellow">전일주의</span>)의 온전함과 안정성을 중시. 인간은 정복자가 아닌 평범한 구성원.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      개별 생명체의 권리를 최우선한다? <span class="badge-ox badge-x">X</span> (생태계 전체의 선이 개별 생명체의 이익보다 우선함 = 환경 파시즘 비판)
+    </div>
+  </div>
+
+  <div class="box-killer">
+    <strong>[수능 킬러] 학자별 "내재적 가치" 부여 대상 비교</strong><br>
+    • 칸트(인간중심): 오직 '이성적인 존재(인간)'만 내재적 가치를 가짐.<br>
+    • 레오폴드(생태중심): 무생물(물, 흙)을 포함한 생태계 전체가 내재적 가치를 지님.<br>
+    • <strong>공통점 함정:</strong> 인간이 <span class="hl-pink">도덕적 행위의 유일한 주체(행위자)</span>라는 점은 모든 학자(칸트~레오폴드)의 공통점!
+  </div>
+
+  <div class="sub-title">02. 벤 다이어그램 판별 알고리즘</div>
+  <div class="box-algorithm">
+    <strong>[실전 문풀 #1] 3자 비교 벤 다이어그램 (싱어 vs 테일러 vs 레오폴드)</strong><br><br>
+    <strong>Step 1. 교집합(세 학자 모두 긍정) 찾기</strong><br>
+    • "인간은 도덕적 행위 주체이다", "동물(쾌고감수능력)은 도덕적 고려 대상이다" → 모두 <span class="badge-ox badge-o">O</span><br><br>
+    <strong>Step 2. 질문의 '주어' 확인하기 (누구까지 포섭하는가?)</strong><br>
+    • "식물도 도덕적 지위를 갖는가?" → 싱어 <span class="badge-ox badge-x">X</span>, 테일러 <span class="badge-ox badge-o">O</span>, 레오폴드 <span class="badge-ox badge-o">O</span><br>
+    • "무생물(토양/물)도 윤리적 고려 대상인가?" → 싱어 <span class="badge-ox badge-x">X</span>, 테일러 <span class="badge-ox badge-x">X</span>, 레오폴드 <span class="badge-ox badge-o">O</span><br><br>
+    <strong>Step 3. 개체주의 vs 전일주의 판별</strong><br>
+    • "도덕적 고려의 기본 단위를 개별 생명체로 보아야 하는가?" → 싱어 <span class="badge-ox badge-o">O</span>, 테일러 <span class="badge-ox badge-o">O</span>, 레오폴드 <span class="badge-ox badge-x">X</span> (생태계 전체)<br><br>
+    <strong>▶ 동물 중심주의 내부 비교 (싱어 vs 리건)</strong><br>
+    • 공통점: 쾌고 감수 능력을 가진 동물은 도덕적 고려 대상이다.<br>
+    • 싱어: 공리주의 기반 (결과주의). 개체의 쾌락 증진/고통 감소가 목적.<br>
+    • 리건: 의무론 기반. 일부 동물은 수단이 아닌 목적 그 자체(삶의 주체)로 대우해야 함.
+  </div>
+
+  <!-- PART 2 -->
+  <div class="section-title">PART 2. 사회 정의와 분배 (롤스, 노직, 왈저)</div>
+  <div class="sub-title">03. 롤스 vs 노직 vs 왈저 분배 정의론</div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">롤스</span>
+      <span class="scholar">자유주의</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      • <span class="hl-yellow">무지의 베일</span>: 원초적 입장에서 자신의 우연적 조건(재능, 지위)을 모르는 상태.<br>
+      • <span class="hl-yellow">차등의 원칙</span>: 최소 수혜자에게 최대 이익이 될 때만 사회적/경제적 불평등 허용.<br>
+      • 타고난 천부적 재능의 '분포'는 공동의 자산.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      • 결과의 평등(절대적 평등)을 주장한다? <span class="badge-ox badge-x">X</span> (절차가 공정하면 결과의 불평등을 인정하는 순수 절차적 정의)<br>
+      • 자신의 천부적 재능에 대한 소유권을 부정한다? <span class="badge-ox badge-x">X</span> (재능의 '분포'를 공동 자산으로 볼 뿐, 개인의 소유권 자체는 인정)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">노직</span>
+      <span class="scholar">자유지상주의</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      • <span class="hl-yellow">소유 권리론</span>: 취득/이전/교정의 과정이 정당하다면 결과도 정당함.<br>
+      • <span class="hl-yellow">최소 국가론</span>: 국가는 치안, 국방 등 최소한의 역할만 수행해야 함.<br>
+      • 천부적 재능은 온전히 개인의 소유.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      • 국가의 모든 과세를 반대한다? <span class="badge-ox badge-x">X</span> (교정적 정의나 최소 국가 유지를 위한 조세는 찬성. 재분배를 위한 조세만 반대)<br>
+      • 정형적(patterned) 분배 원리를 지지한다? <span class="badge-ox badge-x">X</span> (노직은 비정형적/역사적 원리 지지)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">왈저</span>
+      <span class="scholar">공동체주의</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      • <span class="hl-yellow">복합 평등</span>: 하나의 사회적 가치(예: 돈)가 다른 가치(예: 권력, 명예)를 지배해서는 안 됨.<br>
+      • 가치마다 공동체의 역사와 문화가 반영된 고유한 분배 기준이 존재함.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      모든 영역에 동일한 분배 기준을 적용해야 한다? <span class="badge-ox badge-x">X</span> (다원적 정의론이므로 영역별로 다른 기준 적용)
+    </div>
+  </div>
+
+  <div class="sub-title">04. 순서도 (Yes/No) 판별 알고리즘</div>
+  <div class="box-algorithm">
+    <strong>[실전 문풀 #2] 분배적 정의 순서도 돌파구</strong><br><br>
+    <strong>[질문 1] "천부적 운(재능)에 따른 보상 격차는 도덕적으로 정당한가?"</strong><br>
+    → 노직 <span class="badge-ox badge-o">Yes</span> (온전한 자기 소유이므로 격차 정당함)<br>
+    → 롤스 <span class="badge-ox badge-x">No</span> (도덕적 관점에서 자의적인 것이므로, 최소 수혜자를 위해 쓰일 때만 정당)<br><br>
+    <strong>[질문 2] "최소 수혜자의 복지 향상을 위한 국가의 재분배 정책은 정당한가?"</strong><br>
+    → 롤스 <span class="badge-ox badge-o">Yes</span> (차등의 원칙 실현을 위해 필수적)<br>
+    → 노직 <span class="badge-ox badge-x">No</span> (개인의 권리 침해이므로 반대 = 강제 노동과 같음)<br><br>
+    <strong>[질문 3] "정의로운 분배 결과는 정해진 절차를 따름으로써 보장되는가?"</strong><br>
+    → 롤스 <span class="badge-ox badge-o">Yes</span>, 노직 <span class="badge-ox badge-o">Yes</span> (둘 다 '절차적 정의' 지지!)
+  </div>
+
+  <div class="box-killer">
+    <strong>[수능 단골 말장난] 롤스(Rawls)의 "평등" 개념 잡기</strong><br>
+    롤스는 무지의 베일 속 합의 당사자들이 <span class="hl-yellow">'서로 무관심하고 합리적'</span>이라고 가정합니다.<br>
+    선지에서 <em>"합의 당사자들은 타인의 이익을 고려하여 합의한다(X)"</em>, <em>"타인에 대한 동정심을 바탕으로 합의한다(X)"</em>라고 나오면 무조건 오답입니다! 합의는 철저히 자기 이익 추구의 결과로 도출됩니다.
+  </div>
+
+  <!-- PART 3 -->
+  <div class="section-title">PART 3. 교정적 정의와 사형제도 (칸트, 베카리아, 벤담)</div>
+  <div class="sub-title">05. 형벌론: 사형제도에 대한 입장 비교</div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">칸트</span>
+      <span class="scholar">응보주의</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      • <span class="hl-yellow">동해 보복법 (응보)</span>: 살인자는 오직 사형으로써만 죄값을 치를 수 있음.<br>
+      • 형벌은 범죄를 저질렀다는 이유만으로 부과 (<span class="hl-yellow">정언명령</span>).<br>
+      • 사형은 범죄자의 '이성적 인격'을 존중하는 행위임.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      • 형벌을 범죄 예방의 수단으로 본다? <span class="badge-ox badge-x">X</span> (인간은 목적이지 수단이 아님. 사회 방위를 위해 처벌 금지)<br>
+      • 생명권은 어떠한 경우에도 박탈할 수 없다? <span class="badge-ox badge-x">X</span> (살인자는 생명권 박탈이 정당함)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">베카리아</span>
+      <span class="scholar">사회계약 / 공리주의</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      • 목적: 범죄 예방 (일반 예방주의).<br>
+      • <span class="hl-yellow">종신 노역형 지지</span>: 강도(강렬함)보다 지속성이 인간의 마음에 더 큰 공포를 줌.<br>
+      • <span class="hl-pink">사형 반대</span>: 생명은 양도할 수 없으므로 사회 계약에 포함되지 않음.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      • 가장 잔혹하고 강렬한 형벌이 효과적이다? <span class="badge-ox badge-x">X</span> (잔혹성 < 지속성)<br>
+      • 사형은 사회 계약에 위배되지 않는다? <span class="badge-ox badge-x">X</span> (생명을 내어놓는 계약은 무효이므로 부당한 폭력)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">벤담</span>
+      <span class="scholar">공리주의</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      • 목적: 최대 다수의 최대 행복. 사회 전체의 해악을 줄이기 위한 것.<br>
+      • 형벌 자체는 '악'이지만, 더 큰 해악을 막기 위한 <span class="hl-yellow">필요악</span>임.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      범죄에 상응하는 동등한 형벌을 부과해야 한다? <span class="badge-ox badge-x">X</span> (응보주의 비판, 형벌로 인한 고통이 범죄의 이익보다 조금 크기만 하면 됨)
+    </div>
+  </div>
+
+  <div class="box-killer">
+    <strong>[루소(Rousseau)의 사형제 찬성 주의!]</strong><br>
+    루소는 사회계약론자임에도 사형을 찬성합니다. 베카리아와 대비됩니다.<br>
+    <em>"살인자는 사회 계약을 파기한 '공공의 적'이므로 국가 보존을 위해 사형에 처할 수 있다."</em><br>
+    (베카리아: 생명은 계약 불가 ↔ 루소: 국가 보존을 위해 생명도 계약 가능)
+  </div>
+
+  <div class="sub-title">06. 형벌론 비교 선지 판별 알고리즘</div>
+  <div class="box-algorithm">
+    <strong>[실전 문풀 #3] 형벌의 '목적'과 '수단' 판별 공식</strong><br><br>
+    <strong>[질문 1] "형벌은 그 자체가 목적(응보)인가, 범죄 예방을 위한 수단인가?"</strong><br>
+    → 칸트: 형벌 자체가 목적이다. (범죄 예방 수단 아님!)<br>
+    → 베카리아, 벤담: 범죄 예방을 위한 수단이다.<br><br>
+    <strong>[질문 2] "형벌은 본질적으로 선인가 악인가?"</strong><br>
+    → 칸트: 범죄자에 대한 정당한 응보이므로 선(정의)이다.<br>
+    → 벤담: 모든 고통은 악이므로 형벌은 본질적으로 필요악이다.<br><br>
+    <strong>[질문 3] "사형은 살인자의 인격을 존중하는 것인가?"</strong><br>
+    → 오직 <span class="hl-yellow">칸트(Yes)</span>만 해당! (합리적 선택 결과를 스스로 받게 함으로써 이성적 존재로 대우)
+  </div>
+
+  <!-- PART 4 -->
+  <div class="section-title">PART 4. 지구촌 평화와 빈곤 (해외 원조)</div>
+  <div class="sub-title">07. 해외 원조: 싱어 vs 롤스 vs 노직</div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">싱어</span>
+      <span class="scholar">공리주의</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      세계 전체의 쾌락 증진(고통 감소). 국경/거리에 상관없이 <span class="hl-yellow">절대 빈곤에 처한 개인</span>이 대상. 이익 평등 고려의 원칙 전 지구적 적용.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      자국민을 우선 원조해야 한다? <span class="badge-ox badge-x">X</span> (거리/국적 무관)<br>
+      빈곤국의 정치 체제 개선이 목적이다? <span class="badge-ox badge-x">X</span> (개인의 고통 감소에만 관심)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">롤스</span>
+      <span class="scholar">의무론</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      고통받는 사회를 <span class="hl-yellow">'질서 정연한 사회'</span>로 만드는 것. 대상은 개인이 아니라 <span class="hl-yellow">고통받는 사회(국가)</span>. 빈곤 원인은 자원 부족이 아닌 정치/제도적 결함.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      차등의 원칙을 전 지구적으로 적용해야 한다? <span class="badge-ox badge-x">X</span> (국내에만 적용, 국제사회 적용 반대)<br>
+      절대 빈곤이 사라질 때까지 원조해야 한다? <span class="badge-ox badge-x">X</span> (질서 정연한 사회가 되면 빈곤해도 중단)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">노직</span>
+      <span class="scholar">자유지상주의</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      원조는 개인의 <span class="hl-yellow">자율적인 자선 행위</span>일 뿐, 강제적 의무가 아님.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      국가가 원조를 위해 세금을 거두는 것은 정당하다? <span class="badge-ox badge-x">X</span> (소유권 침해)
+    </div>
+  </div>
+
+  <div class="box-killer">
+    <strong>[수능 킬러] 롤스와 싱어의 공통점 (함정 조심!)</strong><br>
+    1. <strong>해외 원조는 '의무'인가?</strong> → 롤스 <span class="badge-ox badge-o">O</span>, 싱어 <span class="badge-ox badge-o">O</span> (둘 다 자선이 아닌 '의무'로 봄! 노직만 자선)<br>
+    2. <strong>원조의 목표 지점(중단 조건)이 존재하는가?</strong> → 롤스 <span class="badge-ox badge-o">O</span>, 싱어 <span class="badge-ox badge-o">O</span><br>
+    • 롤스: '질서 정연한 사회 진입 시' 중단<br>
+    • 싱어: 원조로 인해 내가 잃는 고통이 상대의 쾌락 증진보다 커지는 지점(한계효용 체감)에서 중단
+  </div>
+
+  <div class="sub-title">08. 해외 원조 실전 분석 알고리즘</div>
+  <div class="box-algorithm">
+    <strong>[실전 문풀 #4] 해외 원조 타겟 매칭 & 차등의 원칙 판별법</strong><br><br>
+    <strong>[Focus 1] 대상이 '개인'인가 '국가(제도)'인가?</strong><br>
+    • "가난한 개인의 고통 감소" → <strong>싱어</strong><br>
+    • "불리한 여건에 처한 사회의 제도 개선" → <strong>롤스</strong><br><br>
+    <strong>[Focus 2] 롤스의 '차등의 원칙' 적용 범위</strong><br>
+    • 국내(자국) 분배 → 적용 <span class="badge-ox badge-o">O</span><br>
+    • 국제 사회(원조) → 적용 <span class="badge-ox badge-x">X 절대 안 됨!</span> (국제 사회 빈부격차 해소 목적 아님)<br><br>
+    <strong>[Focus 3] 잘 사는 나라(빈곤하지 않은 나라)도 원조 대상인가?</strong><br>
+    • 롤스: 부유하지만 인권이 억압되는 비민주적 국가(고통받는 사회)라면 대상 <span class="badge-ox badge-o">O</span><br>
+    • 싱어: 절대 빈곤이 없으므로 대상 아님 <span class="badge-ox badge-x">X</span>
+  </div>
+
+  <!-- PART 5 -->
+  <div class="section-title">PART 5. 평화론 & 시민 불복종</div>
+  <div class="sub-title">09. 평화와 전쟁론 (갈퉁, 칸트)</div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">갈퉁 (J. Galtung)의 평화론</span>
+    </div>
+    <div class="row">
+      • <span class="hl-yellow">소극적 평화</span>: 직접적/물리적 폭력이 없는 상태 (전쟁, 테러 없음).<br>
+      • <span class="hl-yellow">적극적 평화</span>: 구조적 폭력(제도적 차별, 빈곤)과 문화적 폭력(종교/사상 차별)까지 제거된 상태.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      소극적 평화는 진정한 평화에 불필요하다? <span class="badge-ox badge-x">X</span> (적극적 평화 실현을 위한 필수 전제조건)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">칸트 (I. Kant)의 영구 평화론</span>
+    </div>
+    <div class="row">
+      • 모든 국가는 <span class="hl-yellow">공화정 체제</span>이어야 함 (국민 동의 필수).<br>
+      • 국제법은 자유로운 국가들의 <span class="hl-yellow">평화 연맹(국제 연맹)</span>에 기초해야 함.<br>
+      • 상비군은 점진적으로 완전히 폐지되어야 함.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      단일한 세계 정부(World Government) 수립을 주장한다? <span class="badge-ox badge-x">X</span> (개별 주권을 침해하는 세계 정부는 반대, 독립 국가들의 수평적 연맹 지지)
+    </div>
+  </div>
+
+  <div class="sub-title">10. 시민 불복종 (소로, 롤스, 싱어)</div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">소로</span>
+      <span class="scholar">개인 양심</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      <span class="hl-yellow">개인의 양심</span>이 유일한 기준. 부정의한 법에는 즉각 불복종.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      다수의 정의관에 바탕을 둔다? <span class="badge-ox badge-x">X</span> (철저히 개인의 도덕적 양심 기준)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">롤스</span>
+      <span class="scholar">공유된 정의관</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      <span class="hl-yellow">다수의 공유된 정의관</span>(헌법 기본 원리)에 위배될 때. <span class="hl-yellow">거의 정의로운(민주적) 사회</span>에서 <span class="hl-yellow">최후의 수단</span>으로 행사.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      • 개인 도덕/종교 신념이 근거가 될 수 있다? <span class="badge-ox badge-x">X</span> (공공 정의관만 근거)<br>
+      • 체제 자체를 전복하려는 행위이다? <span class="badge-ox badge-x">X</span> ('법에 대한 충실성' 내의 행위)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">싱어</span>
+      <span class="scholar">공리주의</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      <span class="hl-yellow">이익(유용성) 계산</span>: 불복종으로 인한 해악 &lt; 법률 변경으로 얻는 이익일 때 정당.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      법률 그 자체를 존중하여 불복종한다? <span class="badge-ox badge-x">X</span> (결과론적 계산에 의존)
+    </div>
+  </div>
+
+  <div class="box-algorithm">
+    <strong>[실전 문풀 #5] 시민 불복종 롤스(Rawls) 3대 함정 필터링</strong><br>
+    • [조건 1] 처벌을 감수하는가? → <span class="badge-ox badge-o">Yes</span> (법 체계에 대한 존중 증명)<br>
+    • [조건 2] 비폭력적인가? → <span class="badge-ox badge-o">Yes</span> (공공 정의관에 호소하는 정치적 언어)<br>
+    • [조건 3] 사회의 모든 부정의한 법이 대상인가? → <span class="badge-ox badge-x">No</span> (심각한 자유/기회균등 위반만 해당, 사소한 부정의는 감수)
+  </div>
+
+  <!-- PART 6 -->
+  <div class="section-title">PART 6. 책임 윤리와 담론 윤리 (요나스, 하버마스)</div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">11. 요나스 (H. Jonas)</span>
+      <span class="scholar">책임 윤리</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      • 새로운 정언 명령: "너의 행위의 결과가 지상에서 인간이 존속할 가능성을 파괴하지 않도록 행위하라."<br>
+      • <span class="hl-yellow">예견적 책임</span>: 행위 의도뿐만 아니라 '예견 가능한 결과'까지 책임.<br>
+      • <span class="hl-yellow">일방적(비호혜적) 책임</span>: 부모가 자식에게 지는 책임처럼 현세대가 일방적으로 짐.
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      <strong>공포의 발견술:</strong> 희망보다 공포를 도덕적 동기로 봄. 선지에서 <em>"과학 기술의 유토피아적 희망을 강조한다(X)"</em>는 대표 오답.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">12. 하버마스 (J. Habermas)</span>
+      <span class="scholar">담론 윤리</span>
+    </div>
+    <div class="row">
+      <span class="tag tag-yellow">핵심</span>
+      <span class="hl-yellow">의사소통의 합리성</span>: 이해관계자들의 평등한 대화와 토론을 통해 규범 도출.<br>
+      <strong>이상적 담화 조건:</strong> ① 모든 사람 참여 보장 ② 평등한 발언권 ③ 더 나은 논증에만 복종
+    </div>
+    <div class="row">
+      <span class="tag tag-pink">함정</span>
+      <strong>우생학/유전자 조작:</strong> 강력 반대. 설계된 아이는 훗날 동등한 입장에서 '자유로운 담론의 참여자'가 될 수 없기 때문 (자율성 훼손).
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="subject">13. 과학 기술의 가치 중립성</span>
+    </div>
+    <div class="row">
+      • <strong>야스퍼스 (가치 중립적):</strong> 기술은 단순한 '수단/도구'일 뿐. 문제는 사용하는 인간의 목적임.<br>
+      • <strong>하이데거 (가치 중립 불가):</strong> 기술은 인간의 사고방식과 삶의 틀을 규정하므로 기술의 본질에 대한 성찰이 필요.
+    </div>
+  </div>
+
+  <div class="box-killer">
+    <strong>[실전 문풀 #6] 생윤 시험 시간 단축 꿀팁</strong><br>
+    • <strong>공통 긍정 선지:</strong> <em>"인간은 도덕적 행위의 주체로서 책임을 져야 한다."</em> → 칸트, 싱어, 테일러, 레오폴드, 요나스 모두 <span class="badge-ox badge-o">O</span><br>
+    • <strong>제시문 팁:</strong> 제시문에 "단지~로서만", "오직~만이" 같은 극단적 표현이 나오면 해당 학자의 시그니처 키워드인지 확인 (예: 칸트 "오직 선의지만이", 싱어 "단지 쾌고감수능력만이")
+  </div>
+
+</body>
+</html>
